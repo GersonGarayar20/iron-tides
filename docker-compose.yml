@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: iron-tides-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: iron_tides
+      POSTGRES_PASSWORD: iron_tides_dev
+      POSTGRES_DB: iron_tides
+    ports:
+      - "5432:5432"
+    volumes:
+      - iron_tides_pgdata:/var/lib/postgresql/data
+
+volumes:
+  iron_tides_pgdata:

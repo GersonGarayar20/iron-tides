@@ -1,0 +1,14 @@
+{
+  "name": "iron-tides",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"pnpm --filter @iron-tides/server dev\" \"pnpm --filter @iron-tides/client dev\"",
+    "build": "pnpm --filter @iron-tides/shared build && pnpm --filter @iron-tides/server build && pnpm --filter @iron-tides/client build"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6",
+    "typescript": "^5.9.3"
+  },
+  "packageManager": "pnpm@11.26.0"
+}

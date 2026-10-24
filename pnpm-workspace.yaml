@@ -1,0 +1,7 @@
+packages:
+  - "shared"
+  - "server"
+  - "client"
+allowBuilds:
+  esbuild: true
+  msgpackr-extract: true
